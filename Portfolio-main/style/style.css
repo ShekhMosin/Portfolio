@@ -1,0 +1,840 @@
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    text-decoration: none !important;
+    list-style-type: none !important;
+    box-sizing: border-box !important;
+    
+    
+}
+
+html,body {
+    background-color: rgb(245, 248 ,253);
+    font-size:20px ;
+    scroll-behavior: smooth;
+  
+  
+}
+
+
+/* global variables */
+
+:root {
+
+    --color1: rgba(0,0,0,0.5);
+    --color2: rgb(246 ,56 ,92);
+    --color3:rgb(212, 16, 52);
+}
+
+
+
+
+/**************************
+
+home screen section start 
+
+***************************/
+
+#home {
+    height: 100vh;
+    /* background-image: url(../img/poster.jpg); */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color1);
+    background-blend-mode: multiply;
+
+    
+}
+#home .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 200%; */
+}
+
+
+#navbar  {
+    /* position: fixed; */
+    height: 50px;
+    /* top:; */
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    list-style: none;
+    background-color: transparent;
+    margin:1rem 1rem 0 1rem;
+    
+}
+#navbar a {
+     margin:3rem 1rem 0 1rem;
+     color: white;
+    font-size: 1rem;
+    transition: all;
+    transition-duration: 1s;
+    /* border-bottom: 2px solid var(--color2);
+    border-width: 0; */
+}
+
+
+#navbar .active,#navbar a:hover {
+    color:var(--color2) ;
+    /* border-bottom: 1px solid var(--color2); */
+    
+    
+
+}
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-weight: bold;
+  
+
+
+}
+
+.head h1 {
+    color: whitesmoke;
+    border-right: 5px solid var(--color2);
+    padding: .2rem 1rem;
+    font-size: 2.5rem;
+
+    
+}
+.head h1 span{
+    color: rgb(223, 16, 16);
+    /* border-bottom: 5px solid var(--color2); */
+}
+
+.head h1:first-child {
+    color: var(--color2);
+    /* padding-right: 240px; */
+    border: none;
+
+}
+
+.scrolldown{
+    position: absolute;
+    /* z-index: 9999; */
+    /* bottom: 40%; */
+    margin-top:1rem;
+    top: 95%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    /* background: rgb(0, 0, 0); */
+    transform: translateY(-80px) translateX(50%) rotate(45deg);
+
+}
+.scrolldown span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    animation: animate 1.5s linear infinite;
+
+}
+.scrolldown span:nth-child(1){
+    transform: translate(-15px, -15px);
+    animation-delay: -0.4s;
+
+}
+.scrolldown span:nth-child(2){
+    transform: translate(0,0);
+    animation-delay: -0.2s;
+    
+}
+.scrolldown span:nth-child(3){
+    transform: translate(15px, 15px);
+    animation-delay: 0s;
+    
+}
+@keyframes animate {
+    0%{
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+    25%{
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    50%,100%{
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+/**************************
+
+home screen section end
+
+***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************
+
+Service section start 
+
+***************************/
+
+
+
+#service {
+
+    color: var(--color2);
+      padding: 3rem;
+     max-width: 100%;
+
+  
+}
+
+#service > h1 {
+    display: flex;
+    font-size: 2rem;
+    padding-bottom: 5rem;
+    color: var(--color2);
+    justify-content: center;
+}
+
+#service .container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    
+} 
+#service .container .row {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 20vw;
+    height: 21vmax;
+    min-width: 20vw;
+
+    margin: 1.5rem;
+    padding: 1rem;
+
+    border: 2px dotted var(--color2);   
+    border-radius: 10%;
+
+    transition: all;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in;
+    overflow: hidden;
+    /* box-shadow: 0 0 0 0 rgba(230, 237, 255,0.7);
+    animation: P-Effect 1.72s infinite; */
+}
+/* @keyframes P-Effect{
+    to{
+      box-shadow: 0 0 0 30px rgba(255, 249, 250, 0);
+      border-radius: 2px;
+    }
+  } */
+#service .container .row:hover{
+
+    /* box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.3); */
+    border-radius: 10%;
+    border: 2px solid white;
+    /* transform: scale(1.1); */
+    background-color: var(--color2);
+    color: white;
+
+}
+#service .row img {
+
+    height: 3.5rem;
+    width: 3.5rem;
+
+    border: .3rem solid var(--color2);
+    border-radius: 50%;
+   
+    margin: 0 1rem;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    transition: all;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in;
+
+
+
+}
+#service .row:nth-child(1) img{
+    background-image: url(../img/service/browser.png);
+}
+#service .row:nth-child(2) img{
+    background-image: url(../img/service/browser.png);
+}
+#service .row:nth-child(3) img{
+    background-image: url(../img/service/browser.png);
+}
+#service .row:nth-child(4) img{
+    background-image: url(../img/service/browser.png);
+}
+#service .row:nth-child(5) img{
+    background-image: url(../img/service/browser.png);
+}
+
+
+#service .row h1 {
+    padding: .5rem 0 0 0 ;
+    /* margin-top: 25px; */
+    /* font-size: 1rem; */
+    font-size: 1.2vmax;
+    text-align: center;
+    letter-spacing: 1.2px;
+
+
+}
+#service .row p{
+
+    /* padding: 1rem auto; */
+    /* font-size: .9rem; */
+    font-size: 1vmax;
+    letter-spacing: 2px;
+    text-align: center;
+
+
+}
+/* //////////////////// 
+
+  service section end 
+
+/////////////////// */
+
+
+
+
+
+
+
+
+
+/* //////////////////// 
+
+   my skill section
+
+/////////////////// */
+
+
+
+#skill {
+    background-image: url(../img/skill.jpg);
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: var(--color2);
+    /* height: 70vh; */
+    padding: 3rem;
+    overflow: hidden;
+    /* min-width: 20vw; */
+    box-shadow: 0 5px 10px 2px rgba(0,0,0,0.5);
+
+
+
+    
+    
+    
+}
+
+#skill  h1{
+    display: flex;
+    font-size: 2rem;
+    padding-bottom: 5rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#skill .container{
+
+    padding: auto 2rem;
+    margin: .5rem 5rem;
+ 
+}
+
+#skill .container ul{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: auto 2rem;
+    margin: .5rem 5rem;
+
+
+}
+#skill .container ul li {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+    width: 8rem;
+    min-width: 1vw;
+
+    margin: 1rem;
+    /* padding: 2.5rem; */
+
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    letter-spacing: 1px;
+
+    border: 2px solid var(--color2);   
+    border-radius: 50%;
+   
+    background-color: var(--color2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+    border: 0 solid white;
+    border-radius: 50%;
+
+    transition: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in;
+
+    /* box-shadow: 0 0 t0 0 rgba(230, 237, 255,0.7);
+    animation: P-Effec 1.72s infinite; */
+
+    
+
+
+
+
+}
+/* @keyframes P-Effect{
+    to{
+      box-shadow: 0 0 0 30px rgba(255, 249, 250, 0);
+      border-radius: 2px;
+    }
+  } */
+
+#skill .container ul li:nth-child(1) {
+    background-image: url(../img/skill/exp_html5.svg);
+}
+#skill .container ul li:nth-child(2) {
+    background-image: url(../img/skill/exp_css3.svg);
+}
+#skill .container ul li:nth-child(3) {
+    background-image: url(../img/skill/exp_javascript.svg);   
+}
+#skill .container ul li:nth-child(4) {
+    background-image: url(../img/skill/exp_bootstrap.svg);
+}
+#skill .container li:nth-child(5) {
+    background-image: url(../img/REACT.png);
+}
+#skill .container ul li:nth-child(6) {
+    background-image: url(../img/Java-Logo.png);
+}
+#skill .container ul li:nth-child(7) {
+    background-image: url(../img/git1.jpg);
+}
+
+/* hover effect */
+
+#skill .container ul li:hover {
+    /* font-size: 1rem; */
+    font-size: 1vmax;
+    font-weight: bold;
+
+    color: var(--color2);
+    background-color: white;
+    background-size: 0px;
+    transform: scale(1.1);
+    /* border: 4rem solid white;
+    height: 0px;
+    width: 0px; */
+
+}
+
+/******************
+
+skill section end 
+
+******************/
+
+
+
+
+
+
+
+
+/**********************
+
+  about section start 
+  
+**********************/
+
+
+
+#about{
+display: flex;
+flex-direction: column;
+/* height: 80vh; */
+/* margin:50px 0px 150px 0px; */
+justify-content: center;
+/* align-items: center;
+font-size: 25px; */
+color: var(--color2);
+padding: 3rem;
+
+}
+#about > h1{
+    display: flex;
+    font-size: 2rem;
+    padding-bottom: 5rem;
+    color: var(--color2);
+    justify-content: center;
+}
+
+#about .container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    width: 100%;
+    /* margin: 30px; */
+    /* padding: 2rem; */
+    padding:auto 1rem;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+.left-about{
+    width: 50%;
+     
+}
+.right-about{
+    width: 50%;
+     
+}
+#about .container .left-about h1,p{
+    margin: 1rem 10px;
+}
+#about .container .left-about p{
+
+    color: var(--color2);
+    font-size: 1.5vmax;
+    text-align: center;
+    letter-spacing: 1.3;
+    /* padding: auto 10px; */
+   
+}
+.right-about img{
+    height: 15rem;
+    width: 25rem;
+    display: flex;
+    
+    
+    background-image: url(../img/about.png);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.7);
+ 
+}
+
+/*******************
+
+  about section end
+
+*******************/
+
+
+
+
+
+
+
+
+
+
+
+/**********************
+
+contact section start 
+
+**********************/
+
+
+#contact {
+    margin: 5rem;
+  
+
+}
+#contact  h1{
+    display: flex;
+    font-size: 2rem;
+    padding-bottom: 5rem;
+    color: var(--color2);
+    justify-content: center;
+}
+.container form {
+
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0 0 10rem 0;
+    
+}
+.container form input,textarea{
+    color: var(--color2);
+    border: 1px solid var(--color2);
+     /* background-color: var(--color2); */
+    background-color: rgb(245, 248 ,253);
+    color:var(--color2);
+    border-radius: 10px;
+    width: 70vw;
+    /* height: 40px; */
+    margin: .4rem;
+    padding: .8rem;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px var(--color2);
+    /* border-bottom: 1px solid #ddd; */
+   
+
+}
+.container form textarea{
+    height: 7rem;
+}
+
+#form:focus{
+    border-color: rgba(0, 255, 34, 0.5);
+}
+
+
+
+
+
+#footer{
+    height: 10rem;
+    background-color: var(--color2);
+    color: white;
+    padding: 2rem;
+
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+    /***********************
+    
+          responsive css
+    
+    ************************/
+
+
+
+    
+
+    @media (min-width:991px) and (max-width:1320px) {
+
+
+
+      
+        
+        * {
+
+            font-size: 20px;
+        }
+
+
+
+    }
+
+
+
+
+
+
+    /**************************
+    
+         Tabe Screen Media 
+    
+    **************************/
+
+
+
+
+
+
+    @media (min-width: 769px) and (max-width: 991px) {
+
+
+
+
+        
+        html,body{
+
+            font-size: 15px;
+        }
+
+
+
+
+        #skill .container .row1 ul {
+
+            width: 100%;
+            /* height: 4rem; */
+        }
+        #skill .container .row1 ul li{
+            width: 10%;
+            height: 10%;
+        }
+
+ 
+
+    }
+
+
+
+
+
+    /*************************
+    
+     Mobile Phone Screen Media
+    
+    **************************/
+
+
+
+    @media (max-width: 768px) {
+
+
+
+        html,body{
+
+            font-size: 10px;
+        }
+
+
+
+
+        #service .container .row {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 30vh;
+            height: 25vh;
+            min-width: 20vw;
+        }
+
+
+
+        /***************
+          about section 
+        ****************/
+
+
+        #about .container{
+            display: flex;
+            /* grid-template-columns: repeat(2,1fr); */
+            flex-direction: column;
+        }
+
+        .left-about{
+            width: 100%;
+            
+        }
+        .right-about{
+            width: 100%;
+           /* overflow: hidden; */
+            
+            
+        }
+        .right-about img{
+            margin: 2rem auto;
+            height: 20rem;
+            width: 100%;
+            display: flex;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+
+        /******************
+           skill section 
+         *****************/
+
+        #skill .container ul{
+    
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: auto .1rem;
+            margin: .2rem .1rem;
+        
+        
+        }
+        #skill .container ul li{
+            /* width: 20%;
+            height: 20%; */
+            width: 5rem;
+            height: 5rem;
+            margin: .7rem;
+        }
+    }
+    
